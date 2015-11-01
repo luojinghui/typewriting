@@ -17,13 +17,10 @@ function add_listener(judge, event) {
 
     input.on("keyup", function(evt) {
         var text = input[0].value;
-        console.log("插入位置index："+index + "   |||  数据位置count:" + count);
-        console.log(judge + "+++++++");
 
         if(evt.keyCode === 16 || evt.keyCode === 20 || evt.keyCode === 13) {
             evt.preventDefault();
         } else {
-            console.log(index +"字母是："+ text[index]+ "   |  " + judge[index]);
             if(text != " " || index < judge.length - 1) {
                 if(evt.keyCode === 8) {
                     if($("." + (index-1)).text() == "_") {
@@ -37,7 +34,6 @@ function add_listener(judge, event) {
                     $("." + index)[0].style.color = "black";
                 } else {
                     if(text[index] === judge[index]) {
-                        console.log(judge[index] + "==========" + text[index]);
                         $("." + index)[0].style.color = "#D4D4D4";
                         $(".display-info")[0].style.display = "block";
                         $(".display-info2").html(correct_rate.toFixed(1) + "%");
@@ -45,11 +41,8 @@ function add_listener(judge, event) {
                     } else {
                         console.log(judge[index] + "--------" + text[index]);
                         if(judge[index] === " ") {
-                            console.log(judge[index] + "   " + index);
                             $("." + index).html("_");
-                            console.log("99999999");
                             $("." + index)[0].style.color = "red";
-                            console.log("00000000000");
                             count ++;
                             correct_rate = ((judge.length - count) / judge.length).toFixed(2) * 100;
                             $(".display-info")[0].style.display = "block";
@@ -89,6 +82,7 @@ function input_end(judge, start_time, start, input, correct_rate) {
     var rate = ((judge.length) / (spend_time / 60)).toFixed(1);
 
     input.blur();
+    $(".start").html("");
     start[0].style.display = "block";
     $(".result-info").append("您这次的正确率是：" + correct_rate + "%\n" + "<br>" +
                             "您这次的耗时是：" + spend_time + "s" + "<br>" +
@@ -102,7 +96,7 @@ function input_end(judge, start_time, start, input, correct_rate) {
     window.setInterval(function() {
         time --;
         if (time === 0) {
-            location.href = "/typewriting/";
+            location.href = "http://luojinghui.github.io/typewriting/";
         }
     }, 1000);
 }
@@ -137,15 +131,12 @@ function start_judge(event) {
     if (event.keyCode === 13) {
         var judge = null;
         judge = get_airticle();
-        console.log(judge);
         var input = $(".input-text");
         var start = $("#result")[0];
 
         start.style.display = "none";
         input.focus();
-        console.log("666666666");
         init_airticle(judge);
-        console.log("77777777");
         $(".result-info").html("");
 
         add_listener(judge, event);

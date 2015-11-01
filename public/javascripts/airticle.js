@@ -102,7 +102,7 @@ function input_end(judge, start_time, start, input, correct_rate) {
     window.setInterval(function() {
         time --;
         if (time === 0) {
-            location.href = "/";
+            location.href = "/typewriting/";
         }
     }, 1000);
 }

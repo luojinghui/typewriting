@@ -1,0 +1,114 @@
+.landing {
+    text-align: center;
+}
+#result {
+    position: absolute;
+    background-color: #F7F7F7;
+    height: 400px;
+    width: 900px;
+    opacity: 0.9;
+    top: 94px;
+    left: 41px;
+    border-radius: 1% 1% 1% 1%;
+}
+.start {
+    text-align: center;
+    font-size: 38px;
+    font-weight: lighter;
+    margin-top: 10px;
+    color: rgb(18, 15, 183);
+}
+.result-info {
+    height: 300px;
+    width: 650px;
+    margin: 0px auto;
+    text-align: center;
+    font-size: 22px;
+    color: #8E284E;
+    padding-top: 70px;
+}
+#main {
+    height: 554px;
+    position: relative;
+    background-color: #F7F7F7;
+    width: 982px;
+    margin: 0px 79px;
+    margin-top: 22px;
+    border: 1px solid rgba(128, 128, 128, 0.45);
+    border-radius: 1%;
+    box-shadow: 1px 21px 47px 0px gray;
+}
+.header {
+    width: 980px;
+    background-color: #E0E0E0;
+    height: 75px;
+    border-bottom: 1px solid #6B6B6B;
+    border-top-left-radius: 2%;
+    border-top-right-radius: 2%;
+}
+.header p {
+    text-align: center;
+    margin: 0 0 0;
+}
+.restart {
+    height: 34px;
+    width: 34px;
+    float: left;
+    position: relative;
+    left: 7px;
+    top: 12px;
+    border: 1px solid gray;
+    border-radius: 81%;
+}
+.next-airticle {
+    height: 34px;
+    width: 34px;
+    float: left;
+    position: relative;
+    left: 11px;
+    top: 12px;
+    border: 1px solid gray;
+    border-radius: 81%;
+}
+.count-time {
+    height: 37px;
+    width: 351px;
+    border: 1px solid gray;
+    border-radius: 1%;
+    background-color: #EAF5D6;
+    float: left;
+    position: relative;
+    left: 233px;
+    top: 10px;
+}
+.line {
+    height: 12px;
+    width: 335px;
+    margin: 13px 6px 7px 7px;
+    border: 1px solid gray;
+    border-radius: 1%;
+    background-color: #EAF5D6;
+}
+.airticle {
+    height: 107px;
+    width: 867px;
+    font-size: 35px;
+    font-weight: 600;
+    margin: 24px 7px 2px 59px;
+}
+.input-text {
+    border: none;
+    background-color: #F7F7F7;
+    font-size: 1px;
+    position: relative;
+    left: 26px;
+    opacity: 0;
+}
+.display-info {
+    width: 121px;
+    float: left;
+    position: relative;
+    left: 430px;
+    top: 17px;
+    display: none;
+}
